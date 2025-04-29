@@ -3,7 +3,7 @@
       "relation": ["delegate_permission/common.handle_all_urls"],
       "target": {
         "namespace": "android_app",
-        "package_name": "com.vercel.gamizo",
+        "package_name": "app.vercel.gamizo.twa",
         "sha256_cert_fingerprints": [
           "EE:3B:CC:A2:CF:16:88:BD:16:29:3E:B2:EF:42:37:CA:A2:53:6D:67:A1:30:65:D6:6B:CA:9D:1F:67:5C:EC:AC" 
         ]
