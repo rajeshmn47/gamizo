@@ -1,14 +1,13 @@
 [
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "app.vercel.gamizo.twa",
-      "sha256_cert_fingerprints": [
-        "79:DA:83:30:37:C8:65:65:0B:E4:DD:E1:14:22:2B:93:7A:F6:CC:F1:FB:E0:62:EF:79:C3:F5:11:75:0E:C1:84"
-      ]
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.vercel.gamizo",
+        "sha256_cert_fingerprints": [
+          "EE:3B:CC:A2:CF:16:88:BD:16:29:3E:B2:EF:42:37:CA:A2:53:6D:67:A1:30:65:D6:6B:CA:9D:1F:67:5C:EC:AC" 
+        ]
+      }
     }
-  }
-]
+  ]
+  
