@@ -37,7 +37,7 @@ const helpAndSupport = () => (
         <p>
           <strong>Email ID:</strong>
           {' '}
-          <a href="mailto:mefigure11@gmail.com">mefigure11@gmail.com</a>
+          <a href="mailto:gamizo11@gmail.com">gamizo11@gmail.com</a>
         </p>
       </li>
     </ul>
