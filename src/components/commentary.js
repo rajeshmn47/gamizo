@@ -109,6 +109,7 @@ export function Commentary({ matchdata }) {
   const dispatch = useDispatch();
   const [confetti, setConfetti] = useState(false);
   const [eventType, setEventType] = useState("");
+  const NEW_URL = "https://backend.dreambet11.io"
 
   useEffect(() => {
     async function getdata() {
@@ -244,7 +245,7 @@ export function Commentary({ matchdata }) {
               {p.videoLink &&
                 <>
                   <video id="videoPlayer" width="100%" controls muted={true} style={{maxHeight:'200px'}}>
-                    <source src={`${URL}/mockvideos/${p.videoLink}`} type="video/mp4" />
+                    <source src={`${NEW_URL}/mockvideos/${p.videoLink}`} type="video/mp4" />
                   </video>
                 </>}
             </>
