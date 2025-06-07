@@ -498,7 +498,7 @@ export default function LiveCategoryTabs({
                   {players.length > 0 ? (
                     players
                       .filter(
-                        (p, index) => p.position === 'batsman' || p.position == 'batsmen',
+                        (p, index) => p.position === 'batsman' || p.position == 'batsmen' || p.position == "batter",
                       )
                       .map((p) => (
                         <EachPlayer

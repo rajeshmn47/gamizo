@@ -16,7 +16,7 @@ export function getImgurl(id, name) {
 }
 
 export function checkwk(p) {
-  if (p == 'wicketkeeper' || p == 'wk-batsman' || p == 'wicket keeper') {
+  if (p == 'wicketkeeper' || p == 'wk-batsman' || p == 'wicket keeper'|| p=="wk-batter") {
     return true;
   }
   return false;
