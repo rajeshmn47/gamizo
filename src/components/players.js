@@ -50,7 +50,7 @@ export function Players() {
     <>
       <div className="logintopbar">
         <EmojiEventsOutlinedIcon style={{ marginRight: '1vw' }} />
-        Gamizo
+        FC4U
       </div>
       <div className="stepper">
         <Steppr />

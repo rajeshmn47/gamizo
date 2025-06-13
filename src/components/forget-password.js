@@ -1,5 +1,3 @@
-import './register.css';
-
 import styled from '@emotion/styled';
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import Button from '@mui/material/Button';
@@ -73,7 +71,7 @@ export function ForgotPassword() {
     <>
       <div className="logintopbar">
         <EmojiEventsOutlinedIcon style={{ marginRight: '1vw' }} />
-        Gamizo
+        FC4U
       </div>
       {!open ? (
         <div className="login">

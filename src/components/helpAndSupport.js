@@ -13,7 +13,7 @@ const helpAndSupport = () => (
         <p>
           <strong>Merchant Legal entity name:</strong>
           {' '}
-          MEFIGURE CELEB PRIVATE
+          KARTAMI FINTECH PRIVATE
           LIMITED
         </p>
       </li>
@@ -21,28 +21,36 @@ const helpAndSupport = () => (
         <p>
           <strong>Registered Address:</strong>
           {' '}
-          32B Grahi Nova bad,
-          Muzaffarnagar, Uttar Pradesh, PIN: 251309
+          universal trade tower, sector 49, gurgaon, PIN: 122018
         </p>
       </li>
       <li>
         <p>
           <strong>Operational Address:</strong>
           {' '}
-          32B Grahi Nova bad,
-          Muzaffarnagar, Uttar Pradesh, PIN: 251309
+          universal trade tower, sector 49, gurgaon, PIN: 122018
         </p>
       </li>
       <li>
         <p>
           <strong>Email ID:</strong>
           {' '}
-          <a href="mailto:gamizo11@gmail.com">gamizo11@gmail.com</a>
+          <a href="mailto:info@fantasycricket4u.com">info@fantasycricket4u.com</a>
         </p>
       </li>
     </ul>
 
     <p>Thank you for reaching out to us!</p>
+    <div style={{ display: 'flex', marginTop: "135px", flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <p>
+        <strong>Designed and Developed by:</strong>
+        {' '}
+      </p>
+      <p>
+        KARTAMI FINTECH PRIVATE
+        LIMITED
+      </p>
+    </div>
   </div>
 );
 
