@@ -37,6 +37,28 @@ const columns = [
 ];
 const ODD_OPACITY = 0.2;
 const StripedDataGrid = styled(DataGrid)(({ theme }) => ({
+  fontFamily: '"Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif',
+  fontSize: '15px',
+  color: '#222',
+  [`& .${gridClasses.cell}`]: {
+    fontWeight: 500,
+    fontSize: '15px',
+    fontFamily: '"Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif',
+    color: '#222',
+  },
+  [`& .${gridClasses.columnHeader}`]: {
+    fontWeight: 700,
+    fontSize: '16px',
+    fontFamily: '"Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif',
+    color: '#1a1a1a',
+    letterSpacing: '0.5px',
+    background: '#f5f5f5',
+  },
+  [`& .${gridClasses.row}`]: {
+    fontFamily: '"Open Sans", "Roboto", "Helvetica Neue", Arial, sans-serif',
+    fontSize: '15px',
+    color: '#222',
+  },
   [`& .${gridClasses.row}.even`]: {
     backgroundColor: '#ceffce',
     '.dreamicon': {

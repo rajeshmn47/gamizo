@@ -151,6 +151,7 @@ export function Match({ u, live }) {
             fontWeight: '800',
             display: 'flex',
             alignItems: 'center',
+            maxWidth: "70%"
           }}
         >
           <span
@@ -158,7 +159,7 @@ export function Match({ u, live }) {
               marginRight: '5px',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
-              width: '100%',
+              maxWidth: '100%',
               overflow: 'hidden',
               fontWeight: '200',
             }}

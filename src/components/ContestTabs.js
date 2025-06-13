@@ -100,7 +100,7 @@ const Name = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin-left: 9px;
+  margin-left: 0px;
 `;
 const ContestContainer = styled.div`
   box-shadow: 0 2px 5px 1px rgba(64, 60, 67, 0.16);

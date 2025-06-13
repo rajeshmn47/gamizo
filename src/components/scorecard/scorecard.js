@@ -34,6 +34,7 @@ const Container = styled.div`
   .MuiAccordionSummary-root {
     transition: background 0.2s;
     cursor: pointer;
+    background: var(--lightred);
     &:hover {
       background: var(--lightred);
     }
@@ -162,7 +163,7 @@ export function ScoreCard({ data, g, livescore }) {
             className={expanded === 'panel1' ? 'expanded' : ''}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "var(--green)" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "var(--lightred)" }} />}
               aria-controls="panel1bh-content"
               id="panel1bh-header"
             >
@@ -195,7 +196,7 @@ export function ScoreCard({ data, g, livescore }) {
             className={expanded === 'panel2' ? 'expanded' : ''}
           >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon style={{ color: "var(--green)" }} />}
+              expandIcon={<ExpandMoreIcon style={{ color: "var(--lightred)" }} />}
               aria-controls="panel2bh-content"
               id="panel2bh-header"
             >
