@@ -9,14 +9,14 @@ import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 import SportsCricketIcon from '@mui/icons-material/SportsCricket';
 import SportsHockeyIcon from '@mui/icons-material/SportsHockey';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
-import { Button, Drawer, Grid } from '@mui/material';
+import { Button, Drawer, Grid, List, ListItem, ListItemText, Typography } from '@mui/material';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
 
 import { logout } from '../actions/userAction';
 import LeftDrawer from './navbar/leftDrawer';
-import { NotificationsNone } from '@mui/icons-material';
 import { FURL } from '../constants/userConstants';
 
 const LeftSide = styled.div`
@@ -122,6 +122,49 @@ padding: 5px;
     margin-right: 10px;
   }`
 
+const NotificationDrawerContent = styled.div`
+  width: 60vw;
+  max-width: 480px;
+  min-width: 320px;
+  padding: 24px 16px;
+  background: #fafbfc;
+  min-height: 100vh;
+  position: relative;
+  @media (max-width: 600px) {
+    width: 60vw;
+    max-width: 60vw;
+    min-width: 0;
+  }
+`;
+
+const NotificationTitle = styled(Typography)`
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+`;
+
+const NotificationEmpty = styled.div`
+  color: #888;
+  text-align: center;
+  margin-top: 40px;
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: -95px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 2;
+  color: #222;
+  &:hover {
+    color: #e53935;
+  }
+`;
+
 export function Navbar({ home }) {
   const { user } = useSelector((state) => state.user);
   const { config } = useSelector((state) => state.config);
@@ -129,6 +172,7 @@ export function Navbar({ home }) {
   const location = useLocation();
   const [open, setOpen] = useState(false);
   const [leftOpen, setLeftOpen] = useState(false);
+  const [notifOpen, setNotifOpen] = useState(false);
   const dispatch = useDispatch;
   const navigate = useNavigate();
 
@@ -142,9 +186,15 @@ export function Navbar({ home }) {
   const handleLogout = () => {
     dispatch(logout());
   };
+
+  // Example notifications (replace with your real data)
+  const notifications = [
+    // { id: 1, text: "Welcome to Gamizo11!" },
+    // { id: 2, text: "You have a new match result." },
+  ];
+
   return (
     <>
-      {' '}
       <LeftDrawer
         leftOpen={leftOpen}
         setLeftOpen={setLeftOpen}
@@ -172,9 +222,9 @@ export function Navbar({ home }) {
                 marginRight: '0px',
                 cursor: 'pointer',
                 fontSize: '20px',
-            
                 strokeWidth: '1.5',
               }}
+              onClick={() => setNotifOpen(true)}
             />
           </IconContainer>
           <IconContainer>
@@ -183,7 +233,6 @@ export function Navbar({ home }) {
               style={{
                 cursor: 'pointer',
                 fontSize: '20px',
-                
                 strokeWidth: '1.5',
               }}
             />
@@ -240,6 +289,29 @@ export function Navbar({ home }) {
           <p>cash bonus</p>
           <h5>₹ 0</h5>
         </Deatil>
+      </Drawer>
+      <Drawer
+        anchor="right"
+        open={notifOpen}
+        onClose={() => setNotifOpen(false)}
+      >
+        <NotificationDrawerContent>
+          <CloseButton onClick={() => setNotifOpen(false)} aria-label="Close notifications">
+            <CloseIcon />
+          </CloseButton>
+          <NotificationTitle>Notifications</NotificationTitle>
+          {notifications.length === 0 ? (
+            <NotificationEmpty>No notifications yet.</NotificationEmpty>
+          ) : (
+            <List>
+              {notifications.map((notif) => (
+                <ListItem key={notif.id} divider>
+                  <ListItemText primary={notif.text} />
+                </ListItem>
+              ))}
+            </List>
+          )}
+        </NotificationDrawerContent>
       </Drawer>
       {/*home && (
         {/*<div className="hometop">
