@@ -201,6 +201,17 @@ const CaptainsContainer = styled.div`
   min-width: 38px;
 `;
 
+const EditIconContainer = styled(EditIcon)`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  color: var(--green);
+  z-index: 2;
+  &:hover {
+    color: var(--red);
+  }
+`
 const CaptainI = styled.div`
   position: absolute;
   left: -8px;
@@ -323,16 +334,16 @@ export function Team({
             matchlive?.result == 'In Progress'
             || matchlive?.result == 'Complete'
           ) && (
-            <EditIconContainer
-              onClick={() => navigate(`/createTeam/${matchId}`, {
-                state: {
-                  selectedPlayers,
-                  editMode: true,
-                  teamId,
-                },
-              })}
-            />
-          )}
+              <EditIconContainer
+                onClick={() => navigate(`/createTeam/${matchId}`, {
+                  state: {
+                    selectedPlayers,
+                    editMode: true,
+                    teamId,
+                  },
+                })}
+              />
+            )}
           <Top onClick={() => navigate(`/savedteam/${teamId}`)}>
             <div>
               <h3>{matchinfo[0]?.awayCode}</h3>
@@ -364,7 +375,7 @@ export function Team({
               </AvatarWrapper>
               <VCaptain>
                 <p>
-                  {captains[1]?.playerName && showName(captains[1]?.playerName)||"vice captain"}
+                  {captains[1]?.playerName && showName(captains[1]?.playerName) || "vice captain"}
                 </p>
               </VCaptain>
             </CaptainsContainer>
