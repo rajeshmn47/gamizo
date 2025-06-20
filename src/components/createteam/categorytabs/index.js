@@ -115,6 +115,7 @@ const EachPlayer = styled.div`
   padding: 12px 10px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   transition: box-shadow 0.2s;
   &:hover {
     box-shadow: 0 4px 16px rgba(44,62,80,0.14);

@@ -30,6 +30,9 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   gap: 18px;
+    @media (max-width: 600px) {  /* xs and sm breakpoints */
+    width: 260px;  /* Adjust padding for mobile */
+  }
 `;
 
 const FlexBox = styled.div`
