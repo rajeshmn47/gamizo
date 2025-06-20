@@ -24,8 +24,11 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
-    icon: './logo192.png', // Replace with your app's icon
-    sound: './ipl.mp3'
+    icon: './gamizologo.png', // Replace with your app's icon
+    sound: './ipl.mp3',
+    data: {
+      url: "https://gamizo.vercel.app"
+    }
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
