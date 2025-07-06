@@ -67,7 +67,7 @@ function geturl() {
     // return "https://backend.dreambet11.io";
     // return "https://gamizo.duckdns.org";
     // return "http://localhost:9000";
-    return "https://mangogames.fun/api"
+    return "https://dream11bet.duckdns.org"
   }
   // return "https://dreamelevenclonebackend-7l34.onrender.com";
   // return "https://dreamelevenclonebackend-1v8e.onrender.com";
@@ -83,7 +83,7 @@ function geturl() {
   // return "https://dreamelevenclonebackend-g4iw.onrender.com"
   // return "https://backend.dreambet11.io";
   // return "https://gamizo.duckdns.org";
-  return "https://mangogames.fun/api"
+  return "https://dream11bet.duckdns.org"
 }
 
 function getfrontendurl() {
